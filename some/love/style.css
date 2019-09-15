@@ -31,8 +31,9 @@
   margin-left: 100px;
   margin-top: 200px;
   font-size: 50px;
+  color: red;
   /*font-family: 'KaiTi'*/
-  text-shadow: 0 0 .25em red, 0 0 .35em red, 0 0 .45em transparent, 0 0 .55em transparent, 0 0 .65em transparent;
+  /*text-shadow: 0 0 .10em red, 0 0 .10em red, 0 0 .10em transparent, 0 0 .10em transparent, 0 0 .10em transparent;*/
 }
 
 .letter {
@@ -40,7 +41,8 @@
   top: 0;
   left: 0;
   display: inline-block;
-  font-size: 4vmin;
+  font-size: 10vmin;
+  color: red;
   text-shadow: 0 0 .25em red, 0 0 .35em red, 0 0 .45em transparent, 0 0 .55em transparent, 0 0 .65em transparent;
 }
 @media (min-width: 600px) {
@@ -1119,6 +1121,6 @@ body {
 html {
   overflow: hidden;
   font-family: 'Petit Formal Script';
-  background: radial-gradient(ellipse at center, #051838, #0A093B 100%);
+  background: radial-gradient(ellipse at center, #fbff00, #ffe421e0 100%);
   color: #fff;
 }
