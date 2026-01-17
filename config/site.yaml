@@ -11,22 +11,20 @@
 # Site Basic Information
 # =============================================================================
 site:
-  title: 余弦の博客 # 网站名称
-  alternate: cosine # 网站英文名称 用于页脚、Logo、@ handle 等
-  subtitle: WA 的一声就哭了 # 网站副标题
-  name: cos # 作者名称 - 请修改为你的名字
-  description: 一个基于 Astro 的现代化博客主题 # 网站描述
+  title: 通り雨 # 网站名称
+  alternate: Just_CJ # 网站英文名称 用于页脚、Logo、@ handle 等
+  subtitle: 降り止まぬ 真夏の通り雨 # 网站副标题
+  name: Just_CJ # 作者名称
+  description: ACG / Java / 中间件 # 网站描述
   avatar: /img/avatar.webp # 网站头像
-  showLogo: true # 是否显示 Logo
-  author: Author # 作者名称 - 请修改为你的名字
-  url: https://koharu.cosine.ren # 站点 URL 用于 RSS 和 SEO
-  startYear: 2024 # 建站年份
+  showLogo: false # 是否显示 Logo
+  author: Just_CJ # 作者名称
+  url: https://just-cj.github.io # 站点 URL 用于 RSS 和 SEO
+  startYear: 2015 # 建站年份
   keywords: # SEO 关键词
-    - 博客
-    - Astro
-    - 技术
-    - 前端
-    # 请根据你的网站内容添加关键词
+    - Java
+    - 中间件
+    - ACG
 
 # =============================================================================
 # Category Map
@@ -92,23 +90,17 @@ featuredCategories:
 #   highlightOnHome: 是否在首页高亮显示最新文章（可选，默认 true，显式设为 false 可禁用）
 #   links: 相关链接配置（可选）
 # -----------------------------------------------------------------------------
-featuredSeries:
-  - slug: weekly # URL 路径: /weekly
-    categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
-    label: 我的周刊 # 简短名称
-    fullName: 我的技术周刊 # 完整名称
-    description: | # 支持多行 Markdown
-      这是周刊/系列文章功能的示例配置。
-      你可以用它来发布定期更新的系列内容，如技术周刊、读书笔记系列等。
-      设置 enabled: false 可以关闭此功能。
-    cover: /img/weekly_header.webp # 系列页面头图
-    enabled: true # 启用此系列
-    icon: ri:newspaper-line # 导航图标
-    links: # 相关链接（可选）
-      github: https://github.com/your-username/your-repo # (可选) GitHub 仓库
-      rss: /rss.xml # (可选) RSS 订阅链接
-      # chrome: https://chromewebstore.google.com/detail/your-extension-id # (可选) 浏览器插件
-      # docs: https://your-docs-url # (可选) 文档链接
+featuredSeries: []
+  # 已禁用周刊功能
+  # - slug: weekly
+  #   categoryName: 周刊
+  #   label: 我的周刊
+  #   fullName: 我的技术周刊
+  #   description: |
+  #     这是周刊/系列文章功能的示例配置。
+  #   cover: /img/weekly_header.webp
+  #   enabled: false
+  #   icon: ri:newspaper-line
   # 示例：添加第二个系列（取消注释启用）
   # - slug: reading # URL 路径: /reading
   #   categoryName: 书摘
@@ -133,13 +125,13 @@ featuredSeries:
 # -----------------------------------------------------------------------------
 social:
   github:
-    url: https://github.com/your-username # 替换为你的 GitHub 链接
+    url: https://github.com/Just-CJ # 替换为你的 GitHub 链接
     icon: ri:github-fill # Remix Icon 的 GitHub 图标
     color: '#191717' # (可选) 图标颜色
-  email:
-    url: mailto:your@email.com # 替换为你的邮箱，需加 mailto: 前缀
-    icon: ri:mail-line
-    color: '#55acd5'
+  twitter:
+    url: https://twitter.com/s_void
+    icon: ri:twitter-fill
+    color: '#4b9ae4'
   rss:
     url: /rss.xml # 站内 RSS 订阅地址
     icon: ri:rss-line
@@ -195,31 +187,31 @@ friends:
         desc: 站点简介 # 站点简介
         image: https://your-blog.com/avatar.jpg # 头像链接
         color: "#ffc0cb" # 主题色（可选）
-  data: # 友链列表
-    - site: 余弦の博客
-      url: https://blog.cosine.ren
-      owner: cos
-      desc: FE / ACG / 手工 / 深色模式强迫症 / INFP / 兴趣广泛养两只猫的老宅女 / remote
-      image: https://blog.cosine.ren/img/avatar.webp
-      color: '#ed788b'
-    - site: 示例博客 A
-      url: https://example-a.com
-      owner: Alice
-      desc: 一个热爱技术的开发者
-      image: https://api.dicebear.com/7.x/avataaars/svg?seed=Alice
-      color: '#BEDCFF'
-    - site: 示例博客 B
-      url: https://example-b.com
-      owner: Bob
-      desc: 分享生活与技术的小站
-      image: https://api.dicebear.com/7.x/avataaars/svg?seed=Bob
-      color: '#FBC1CC'
-    - site: 示例博客 C
-      url: https://example-c.com
-      owner: Carol
-      desc: 记录学习与成长的地方
-      image: https://api.dicebear.com/7.x/avataaars/svg?seed=Carol
-      color: '#ABDCFF'
+  # data: # 友链列表
+  #   - site: 余弦の博客
+  #     url: https://blog.cosine.ren
+  #     owner: cos
+  #     desc: FE / ACG / 手工 / 深色模式强迫症 / INFP / 兴趣广泛养两只猫的老宅女 / remote
+  #     image: https://blog.cosine.ren/img/avatar.webp
+  #     color: '#ed788b'
+  #   - site: 示例博客 A
+  #     url: https://example-a.com
+  #     owner: Alice
+  #     desc: 一个热爱技术的开发者
+  #     image: https://api.dicebear.com/7.x/avataaars/svg?seed=Alice
+  #     color: '#BEDCFF'
+  #   - site: 示例博客 B
+  #     url: https://example-b.com
+  #     owner: Bob
+  #     desc: 分享生活与技术的小站
+  #     image: https://api.dicebear.com/7.x/avataaars/svg?seed=Bob
+  #     color: '#FBC1CC'
+  #   - site: 示例博客 C
+  #     url: https://example-c.com
+  #     owner: Carol
+  #     desc: 记录学习与成长的地方
+  #     image: https://api.dicebear.com/7.x/avataaars/svg?seed=Carol
+  #     color: '#ABDCFF'
 
 # =============================================================================
 # Announcements
@@ -318,11 +310,6 @@ navigation:
   - name: 首页 # 菜单显示名称
     path: / # 链接路径
     icon: ri:home-heart-fill # 图标
-  # - name: 书摘
-  #   path: /reading
-  - name: 周刊
-    path: /weekly
-    icon: ri:newspaper-line
   - name: 文章 # 有子菜单时，path 可省略
     icon: ri:quill-pen-ai-fill
     children: # 子菜单列表
@@ -335,9 +322,6 @@ navigation:
       - name: 归档
         path: /archives
         icon: ri:archive-2-fill
-  - name: 友链
-    path: /friends
-    icon: ri:links-line
   - name: 关于
     path: /about
     icon: fa6-regular:circle-user
