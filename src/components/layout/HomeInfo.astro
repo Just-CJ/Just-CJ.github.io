@@ -33,11 +33,12 @@ const { className } = Astro.props;
 const filteredRouters = filterNavItems(routers, configuredSeriesSlugs, enabledSeriesSlugs, RESERVED_ROUTES);
 ---
 
-<div class={cn('flex flex-col items-center', className)} data-home-info-container={uniqueId}>
-  <div class="relative h-40 w-40 rounded-full" style={getLqipStyle(siteConfig.avatar ?? '/img/avatar.webp')}>
+<div class={cn('journal-profile flex flex-col items-center', className)} data-home-info-container={uniqueId}>
+  <p class="journal-sidebar-label">ABOUT / 作者</p>
+  <div class="journal-avatar relative h-40 w-40 rounded-full" style={getLqipStyle(siteConfig.avatar ?? '/img/avatar.webp')}>
     <img
       transition:persist="page-home-info-avatar"
-      class="shadow-card-darker hover:animate-shake h-full w-full rounded-full transition"
+      class="h-full w-full rounded-full"
       src={siteConfig.avatar ?? '/img/avatar.webp'}
       alt={`${siteConfig.name ?? ''} avatar`}
       loading="eager"
@@ -46,7 +47,7 @@ const filteredRouters = filterNavItems(routers, configuredSeriesSlugs, enabledSe
     {christmasConfig.enabled && christmasConfig.features.christmasHat && <ChristmasHat />}
   </div>
 
-  <p class="mt-2">{siteConfig?.name}</p>
+  <p class="journal-author mt-2">{siteConfig?.name}</p>
   <p class="text-muted-foreground mt-3 text-center">{siteConfig?.description}</p>
   <Social />
   <div
@@ -69,7 +70,7 @@ const filteredRouters = filterNavItems(routers, configuredSeriesSlugs, enabledSe
       标签
     </a>
   </div>
-  <div class="mt-6 flex w-full flex-col items-center gap-2.5">
+  <div class="journal-profile-nav mt-6 flex w-full flex-col items-center gap-2.5">
     {
       filteredRouters.map(({ name, path, icon, children }, index) => {
         if (children?.length) {

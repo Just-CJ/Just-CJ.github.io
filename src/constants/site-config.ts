@@ -204,7 +204,18 @@ export const seoConfig = {
   url: siteConfig.site,
 };
 
-export const defaultCoverList = Array.from({ length: 21 }, (_, index) => index + 1).map((item) => `/img/cover/${item}.webp`);
+// AI-assisted GBC fan illustrations; prompts and references are recorded beside the assets.
+export const defaultCoverList = [
+  'subaru-drums',
+  'momoka-guitar',
+  'tomo-keyboard',
+  'rupa-records',
+  'subaru-rooftop',
+  'nina-subaru-cafe',
+  'nina-rain',
+  'riverside',
+  'rehearsal-still-life',
+].map((name) => `/img/gbc-art/${name}.webp`);
 
 // Analytics config types
 type AnalyticsConfig = {

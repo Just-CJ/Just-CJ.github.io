@@ -46,13 +46,18 @@ const page: Page<BlogPost> = {
     <Cover slot="cover" />
     <HomeSider slot="sider" />
     <div
+      id="home-posts"
       class={`bg-gradient-start shadow-box tablet:shadow-none flex flex-col gap-4 overflow-hidden  ${CONTENT_PADDING.standard}`}
     >
-      <Divider>置顶文章</Divider>
-      {stickyPosts.length > 0 && <PostList posts={stickyPosts} showPaginator={false} />}
-      <Divider>文章列表</Divider>
+      {stickyPosts.length > 0 && (
+        <>
+          <Divider>置顶文章</Divider>
+          <PostList posts={stickyPosts} showPaginator={false} />
+        </>
+      )}
+      <div class="journal-index-heading"><Divider>最近的文字</Divider><a href="/archives">全部归档 ↗</a></div>
       <PostList posts={posts} page={page} showPaginator={true} baseUrl="/posts" isHomePage={true} />
-      <Divider className="mt-6">精选分类</Divider>
+      <Divider className="mt-6">按主题翻阅</Divider>
       <CategoryCards />
     </div>
   </TwoColumnLayout>

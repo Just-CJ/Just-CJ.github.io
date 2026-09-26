@@ -5,7 +5,6 @@ import { siteConfig } from '@constants/site-config';
 import { getSiteStats } from '@lib/stats';
 import { cn } from '@lib/utils';
 import { Icon } from 'astro-icon/components';
-import SakuraSVG from '../svg/SakuraSvg';
 
 interface Props {
   className?: string;
@@ -18,7 +17,7 @@ const currentYear = new Date().getFullYear();
 const startYear = siteConfig?.startYear ?? currentYear;
 ---
 
-<footer class={cn('mt-auto pb-6', className)}>
+<footer class={cn('journal-footer mt-auto pb-6', className)}>
   <div class={cn('mx-auto flex flex-col items-center gap-3 px-6 md:pb-10 md:px-3', MAX_WIDTH.content)}>
     <!-- Announcements Entry -->
     <FooterAnnouncementEntry client:load />
@@ -61,12 +60,18 @@ const startYear = siteConfig?.startYear ?? currentYear;
           </>
         )
       }
-      <SakuraSVG className="mx-1 size-5 animate-spin text-[#FFC0CB] duration-10000" />
+      <span class="mx-1" aria-hidden="true">·</span>
       <span class="author font-medium opacity-75" itemprop="copyrightHolder">
         {siteConfig.name}
         {siteConfig?.alternate ? `@${siteConfig.alternate}` : ''}
       </span>
     </div>
+
+    <p class="text-muted-foreground text-center text-xs">
+      GBC 封面为 AI 辅助同人插画 · 角色原作 ©東映アニメーション ·
+      <a class="footer-link" href="https://girls-band-cry.com/character/" target="_blank" rel="noopener noreferrer">角色参考</a>
+      · 非官方粉丝主题
+    </p>
 
     <!-- Powered By -->
     <div class="text-muted-foreground/80 flex items-center gap-2 text-xs">

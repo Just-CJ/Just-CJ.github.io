@@ -21,7 +21,7 @@ const { page } = Astro.props;
 
 <Layout title={seoConfig.title}>
   <TwoColumnLayout>
-    <Cover slot="cover" />
+    <Cover slot="cover" title={`文章列表 · 第 ${page.currentPage} 页`} />
     <HomeSider slot="sider" />
     <div
       class={`shadow-box bg-gradient-start tablet:shadow-none flex flex-col gap-4 overflow-hidden ${CONTENT_PADDING.standard}`}

@@ -11,12 +11,12 @@
 # Site Basic Information
 # =============================================================================
 site:
-  title: 通り雨 # 网站名称
+  title: 中指立てたくなったら、 # GBC 第二话仁菜台词，上半句
   alternate: Just_CJ # 网站英文名称 用于页脚、Logo、@ handle 等
-  subtitle: 降り止まぬ 真夏の通り雨 # 网站副标题
+  subtitle: 小指立ててください。 # GBC 第二话仁菜台词，下半句
   name: Just_CJ # 作者名称
   description: ACG / Java / 中间件 # 网站描述
-  avatar: /img/avatar.webp # 网站头像
+  avatar: /img/gbc/subaru-avatar.svg # 网站头像
   showLogo: false # 是否显示 Logo
   author: Just_CJ # 作者名称
   url: https://just-cj.github.io # 站点 URL 用于 RSS 和 SEO
@@ -58,19 +58,19 @@ categoryMap:
 featuredCategories:
   - link: life # 对应 categoryMap 中 随笔: life
     label: 随笔
-    image: /img/cover/2.webp
+    image: /img/gbc-art/riverside.webp
     description: 生活记录、随想随笔
   - link: note # 对应 categoryMap 中 笔记: note
     label: 笔记
-    image: /img/cover/4.webp
+    image: /img/gbc-art/band-rehearsal.webp
     description: 技术笔记、学习笔记
   - link: note/front-end # 嵌套分类：笔记/前端
     label: 前端
-    image: /img/cover/1.webp
+    image: /img/gbc-art/subaru-drums.webp
     description: 前端技术相关
   - link: tools # 对应 categoryMap 中 工具: tools
     label: 工具
-    image: /img/cover/11.webp
+    image: /img/gbc-art/nina-rain.webp
     description: 工具使用、效率提升
 
 # =============================================================================

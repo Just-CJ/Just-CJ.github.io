@@ -39,7 +39,7 @@ const isPostPage = Astro.url.pathname.startsWith('/post/');
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/img/gbc/subaru-avatar.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -54,7 +54,7 @@ const isPostPage = Astro.url.pathname.startsWith('/post/');
     <link rel="stylesheet" href="/fonts/ChillRoundFBold/result.css" media="print" onload="this.setAttribute('media','all')" />
 
     <ClientRouter />
-    <LoadingIndicator color="#e9536a" />
+    <LoadingIndicator color="#89932c" />
     <Tooltips />
     <!-- metadata -->
     <meta name="description" content={description} />
@@ -276,7 +276,7 @@ const isPostPage = Astro.url.pathname.startsWith('/post/');
   </head>
   <body>
     <ChristmasEffects transition:persist="christmas-snowfall" />
-    <div class="flex min-h-screen flex-col text-black dark:text-white">
+    <div class="flex min-h-screen flex-col text-foreground">
       <Header isPostPage={isPostPage} tocNumbering={post?.data.tocNumbering ?? true} />
       <main class="relative flex grow flex-col gap-4">
         {(<slot />)}

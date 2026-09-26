@@ -1,8 +1,8 @@
 ---
 import EmptySvg from '@components/svg/EmptySvg';
 import { defaultCoverList } from '@constants/site-config';
+import { getSortedPosts } from '@lib/content';
 import type { Page } from 'astro';
-import { shuffle } from 'es-toolkit';
 import type { BlogPost } from 'types/blog';
 import Paginator from './Paginator.astro';
 import PostItemCard from './PostItemCard.astro';
@@ -17,7 +17,13 @@ interface Props {
 }
 
 const { posts, page, showPaginator = true, baseUrl, isHomePage = false, isSimple = false } = Astro.props;
-const covers = shuffle(defaultCoverList);
+// Use the complete collection so fallback covers remain consistent in filtered lists.
+// Published posts pin their chosen artwork in frontmatter.
+const allPosts = await getSortedPosts();
+const coverById = new Map(allPosts.map((post, index) => [post.id, defaultCoverList[index % defaultCoverList.length]]));
+function getCover(post: BlogPost) {
+  return coverById.get(post.id) ?? defaultCoverList[0];
+}
 ---
 
 {
@@ -38,7 +44,7 @@ const covers = shuffle(defaultCoverList);
             data={post}
             showTags={!isSimple}
             leftClip={index % 2 === 0}
-            randomCover={covers[index % covers.length]}
+            randomCover={getCover(post)}
             hideCover={isSimple}
             isSimple={isSimple}
           />
